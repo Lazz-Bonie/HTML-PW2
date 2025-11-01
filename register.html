@@ -236,14 +236,20 @@ function convertToUppercase(input) {
 document.addEventListener('DOMContentLoaded', function() {
     const uppercaseFields = ['studentName', 'fatherName', 'motherName'];
     
-    uppercaseFields.forEach(fieldId => {
+    uppercaseFields.forEach(fieldId => 
+		{
         const field = document.getElementById(fieldId);
-        if (field) {
+        	//convert to uppercase on input
             field.addEventListener('input', function() {
-                this.value = this.value.toUpperCase();
+					convertToUppercase(this);
+			});
+			//convert to uppercase when leaving the firel
+			field.addEventListener('blue',function()
+			{
+                convertToUppercase(this);
             });
-        }
-    });
+        });
+    }
 });
 </script>	
 	
